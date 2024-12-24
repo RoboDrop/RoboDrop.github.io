@@ -20,7 +20,6 @@
 
 title: RoboDrop Automation
 description: Custom automation for life sciences
-baseurl: "/robodrop"
 url: "https://robodrop.github.io"
 include:
   - assets
