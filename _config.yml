@@ -21,7 +21,7 @@
 title: RoboDrop Automation
 description: Custom automation for life sciences
 baseurl: "/robodrop"
-url: "https://neilsonwilson.github.io"
+url: "https://robodrop.github.io"
 include:
   - assets
 layout:
