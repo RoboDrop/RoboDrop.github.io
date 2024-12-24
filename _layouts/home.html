@@ -8,42 +8,55 @@
 </head>
 <body>
     <header>
-        <h1><a href="/">🤖💧</a></h1>
+        <div class="title-container">
+            <a href="/" class="title-link">
+                <span class="emoji">🤖💧</span>
+                <div class="title-text">
+                    <h2>RoboDrop</h2>
+                    <h3>Lab Automation</h3>
+                </div>
+            </a>
+        </div>
+        <nav>
+            <div class="menu">
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
     </header>
-    <nav>
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="menu">
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
 
     <!-- Intro Section -->
-    <section class="intro", section id="intro">
-        <h2>RoboDrop Automation</h2>
-        <p>We provide Automation consultations, programming and custom integrations for lab workflows. </p>
-    </section>
-    
-    <!-- About Section -->
-    <section class="about", section id="about">
-        <h2>About</h2>
-        <p>About section</p>
-        <p></p>
+    <section class="intro" id="intro" style="display: flex; align-items: center;">
+        <div style="flex: 1;">
+            <h2>RoboDrop Automation</h2>
+            <p>We provide Automation consultations, programming, and custom integrations for lab workflows.</p>
+        </div>
+        <div style="flex: 1; text-align: right;">
+            <img src="{{ '/assets/images/robopipes.png' | relative_url }}" alt="RoboDrop working" style="max-width: 100%; height: auto;">
+        </div>
     </section>
 
+    <hr> <!-- Horizontal line -->
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About</h2>
+        <p>About section</p>
+    </section>
+
+    <hr> <!-- Horizontal line -->
+
     <!-- Portfolio Section -->
-    <section class="portfolio", section id="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
         <p>Portfolio section</p>
     </section>
 
+    <hr> <!-- Horizontal line -->
+
     <!-- Contact Section -->
-    <section class="contact", section id="contact">
+    <section class="contact" id="contact">
         <h2>Contact</h2>
         <p>Contact section</p>
     </section>

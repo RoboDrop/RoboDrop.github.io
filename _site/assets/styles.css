@@ -1,33 +1,75 @@
+/* General styles */
 body {
     margin: 0;
     font-family: "Helvetica Neue", Arial, sans-serif;
     color: #d1d5db;
     background-color: #1e1e2f;
 }
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #2a2a40;
-    color: #10a37f;
-    text-align: center;
-    padding: 2rem 1rem;
+    padding: 1rem 2rem;
     border-bottom: 1px solid #3c3c5e;
 }
-header h1 {
+
+/* Title container styles */
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.title-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Maintain current color */
+}
+
+.title-link:hover {
+    text-decoration: none; /* Prevent underline on hover */
+}
+
+.title-link:visited {
+    color: inherit; /* Prevent color change after visit */
+}
+
+.title-container .emoji {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-right: 1rem;
+}
+
+.title-container .title-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container .title-text h2 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #10a37f;
 }
+
+.title-container .title-text h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Navigation styles */
 nav {
     display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Aligns items vertically */
-    background: #2a2a40;
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid #3c3c5e;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
 }
 
 nav .menu {
     display: flex;
-    gap: 2rem; /* Adds spacing between the links */
+    gap: 2rem;
 }
 
 nav a {
@@ -38,61 +80,46 @@ nav a {
 
 nav a:hover {
     color: #10a37f;
-    text-decoration: none;
 }
-nav .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-nav .hamburger div {
-    width: 25px;
-    height: 3px;
-    background: #d1d5db;
-    margin: 3px 0;
-}
-nav .menu.active {
+
+/* Intro section styles */
+.intro {
     display: flex;
-    flex-direction: column;
-    gap: 0;
-    animation: dropdown 0.3s ease-out;
+    align-items: center;
+    padding: 2rem;
 }
-@keyframes dropdown {
-    from {
-        max-height: 0;
-        opacity: 0;
-    }
-    to {
-        max-height: 500px;
-        opacity: 1;
-    }
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded edges */
+    padding: 10px; /* Padding around the image */
+    background-color: #2a2a40; /* Optional background for better separation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for a subtle effect */
 }
-.hero {
-    text-align: center;
-    padding: 4rem 1rem;
-    background: #242435;
-}
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #10a37f;
-}
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #d1d5db;
-}
+
+/* Section styles */
 .section {
     padding: 2rem 1rem;
     text-align: center;
     background: #1e1e2f;
 }
+
 .section h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #10a37f;
 }
+
+/* Horizontal line styling */
+hr {
+    border: none;
+    height: 1px;
+    background: #3c3c5e;
+    margin: 2rem 0;
+}
+
+/* Footer styles */
 footer {
     text-align: center;
     padding: 1rem;
@@ -100,14 +127,17 @@ footer {
     color: #d1d5db;
     border-top: 1px solid #3c3c5e;
 }
+
 footer a {
     color: #10a37f;
     text-decoration: none;
 }
+
 footer a:hover {
-    text-decoration: none;
     color: #28e9a5;
 }
+
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     nav .menu {
         display: none;
@@ -117,19 +147,21 @@ footer a:hover {
         align-items: flex-end;
         padding-right: 1rem;
     }
+
     nav .hamburger {
         display: flex;
+        flex-direction: column;
+        cursor: pointer;
     }
 
-}
-@media (min-width: 769px) {
-    .intro,
-    .about,
-    .portfolio,
-    .contact {
-        margin: 0 10rem; /* Adjust this value as needed */
+    nav .hamburger div {
+        width: 25px;
+        height: 3px;
+        background: #d1d5db;
+        margin: 3px 0;
     }
 }
+
 html {
     scroll-behavior: smooth;
 }
