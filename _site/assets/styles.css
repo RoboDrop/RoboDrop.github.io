@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #d1d5db;
+    background-color: #1e1e2f;
+}
+header {
+    background: #2a2a40;
+    color: #10a37f;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #3c3c5e;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #10a37f;
+}
+nav {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Aligns items vertically */
+    background: #2a2a40;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #3c3c5e;
+}
+
+nav .menu {
+    display: flex;
+    gap: 2rem; /* Adds spacing between the links */
+}
+
+nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: #10a37f;
+    text-decoration: none;
+}
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+nav .hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #d1d5db;
+    margin: 3px 0;
+}
+nav .menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    animation: dropdown 0.3s ease-out;
+}
+@keyframes dropdown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #242435;
+}
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #10a37f;
+}
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #d1d5db;
+}
+.section {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #1e1e2f;
+}
+.section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #10a37f;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2a2a40;
+    color: #d1d5db;
+    border-top: 1px solid #3c3c5e;
+}
+footer a {
+    color: #10a37f;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: none;
+    color: #28e9a5;
+}
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        width: 100%;
+        background: #2a2a40;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 1rem;
+    }
+    nav .hamburger {
+        display: flex;
+    }
+
+}
+@media (min-width: 769px) {
+    .intro,
+    .about,
+    .portfolio,
+    .contact {
+        margin: 0 10rem; /* Adjust this value as needed */
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
