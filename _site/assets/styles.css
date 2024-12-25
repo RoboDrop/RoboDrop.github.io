@@ -178,10 +178,10 @@ nav a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(2, 1fr); /* Two panels per row maximum */
     gap: 1.5rem; /* Space between grid items */
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 800px; /* Adjust the max-width as needed */
 }
 
 .service-item {
@@ -315,7 +315,81 @@ nav a:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 }   
+/* Contact Section */
+.contact {
+    padding: 2rem 1rem;
+    background-color: #1e1e2f;
+    text-align: center;
+    color: #d1d5db;
+}
 
+.contact h2 {
+    font-size: 1.8rem;
+    color: #10a37f;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #d1d5db;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #10a37f;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #2a2a40;
+    color: #d1d5db;
+    border: 1px solid #3c3c5e;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #10a37f;
+}
+
+.contact-form textarea {
+    resize: none; /* Prevent resizing for a consistent look */
+}
+
+.btn-submit {
+    background-color: #10a37f;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #28e9a5;
+}
 /* Section styles */
 .section {
     padding: 2rem 1rem;
