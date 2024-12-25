@@ -83,11 +83,11 @@ nav a:hover {
 }
 
 /* Intro section styles */
-/* Intro Section */
 .intro {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
     padding: 2rem;
     background-color: #1e1e2f; /* Matches the site theme */
 }
@@ -95,6 +95,7 @@ nav a:hover {
 .intro-text {
     flex: 1;
     padding-right: 2rem; /* Space between text and image */
+    text-align: left; /* Keep the text left-aligned */
 }
 
 .intro-text h1 {
@@ -112,17 +113,51 @@ nav a:hover {
 
 .intro-image {
     flex: 1;
-    text-align: right;
+    text-align: center; /* Center the image when stacked */
+    margin-top: 1rem; /* Adds spacing when image moves on top */
 }
 
 .intro-image img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 15px; /* Rounded edges for the image */
     padding: 10px; /* Padding around the image */
     background-color: #2a2a40; /* Optional background for the image */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column; /* Stack the image on top of the text */
+        text-align: center; /* Center-align content on small screens */
+    }
+
+    .intro-text {
+        padding-right: 0; /* Remove right padding for center alignment */
+        text-align: center; /* Center the text */
+    }
+
+    .intro-text h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .intro-text p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .intro-image {
+        margin-top: 0; /* Reset margin for seamless stacking */
+    }
+
+    .intro-image img {
+        max-width: 50%; /* Reduce size by 50% */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+
 /* Customer Section */
 .customer {
     padding: 2rem 1rem;
