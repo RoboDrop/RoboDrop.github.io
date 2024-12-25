@@ -83,19 +83,83 @@ nav a:hover {
 }
 
 /* Intro section styles */
+/* Intro Section */
 .intro {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 2rem;
+    background-color: #1e1e2f; /* Matches the site theme */
 }
 
-.intro img {
+.intro-text {
+    flex: 1;
+    padding-right: 2rem; /* Space between text and image */
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    color: #d1d5db; /* Highlighted headline */
+    margin: 0 0 1rem 0;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    color: #d1d5db; /* Subheading color */
+    margin: 0;
+    line-height: 1.6;
+}
+
+.intro-image {
+    flex: 1;
+    text-align: right;
+}
+
+.intro-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 15px; /* Rounded edges */
+    border-radius: 15px; /* Rounded edges for the image */
     padding: 10px; /* Padding around the image */
-    background-color: #2a2a40; /* Optional background for better separation */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for a subtle effect */
+    background-color: #2a2a40; /* Optional background for the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+/* Customer Section */
+.customer {
+    padding: 2rem 1rem;
+    background-color: #1e1e2f;
+    text-align: center;
+    color: #d1d5db;
+}
+
+.customer-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.customer-content h2 {
+    font-size: 1.8rem;
+    color: #10a37f;
+    margin-bottom: 1.5rem;
+}
+
+.customer-content ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    text-align: left; /* Align list items to the left for readability */
+    display: inline-block; /* Center the list within the section */
+}
+
+.customer-content ul li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #d1d5db;
+    display: flex;
+    align-items: center;
+}
+
+.customer-content ul li input[type="checkbox"] {
+    margin-right: 1rem;
 }
 
 /* Section styles */
