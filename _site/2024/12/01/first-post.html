@@ -17,13 +17,20 @@
                 </div>
             </a>
         </div>
-        <nav>
-            <div class="menu">
-                <a href="#services">Services</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Contact</a>
+        <div class="nav-container">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </nav>
+            <nav>
+                <div class="menu" id="menu">
+                    <a href="#services">Services</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact" class="contact-link">Contact</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!-- Intro Section -->
@@ -84,6 +91,24 @@
             </div>
         </div>
     </section>
+    <section class="experience-section" id="experience">
+        <h2>Experienced development with</h2>
+        <div class="logo-grid">
+            <!-- Row 1 -->
+            <div class="logo-item"><img src="/assets/images/agilent.png" alt="Agilent"></div>
+            <div class="logo-item"><img src="/assets/images/beckmancoulter.png" alt="Beckman Coulter"></div>
+            <div class="logo-item"><img src="/assets/images/formulatrix.png" alt="Formulatrix"></div>
+            <!-- Row 2 -->
+            <div class="logo-item"><img src="/assets/images/hamilton.png" alt="Hamilton"></div>
+            <div class="logo-item"><img src="/assets/images/opentrons.png" alt="Opentrons"></div>
+            <div class="logo-item"><img src="/assets/images/spt_labtech.png" alt="SPT Labtech"></div>
+            <!-- Row 3 -->
+            <div class="logo-item"><img src="/assets/images/tecan.png" alt="Tecan"></div>
+            <div class="logo-item"><img src="/assets/images/benchling.png" alt="Benchling"></div>
+            <div class="logo-item"><img src="/assets/images/gcp.png" alt="GCP"></div>
+        </div>
+        <p class="closing-statement">and much more!</p>
+    </section>
     <hr> <!-- Horizontal line -->
 
     <!-- Portfolio Section -->
@@ -105,7 +130,10 @@
         <a href="/blog" class="blog-section-link">View All Blog Posts</a>
     </section>
         
+
+
     <hr> <!-- Horizontal line -->
+
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -135,3 +163,25 @@
     </footer>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        // Ensure the menu is collapsed initially
+        menu.classList.remove('active');
+
+        // Toggle the menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Close the menu when resizing to larger screens
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menu.classList.remove('active');
+            }
+        });
+    });
+</script>
