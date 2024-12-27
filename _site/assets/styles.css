@@ -308,7 +308,7 @@
   
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin: 0 auto;
     max-width: 800px;
@@ -333,12 +333,11 @@
   }
   
   .service-item img {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
     border-radius: 15px;
     padding: 10px;
     background-color: #2a2a40;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
   }
   
@@ -508,51 +507,109 @@ body {
 }
 
 /* Specific to News Page */
-.news-page h2 {
-    text-align: left; /* Or center, depending on your preference */
+.news-page {
+    padding: 20px;
+    background-color: #1e1e2f; /* Matches the site's background */
+    color: #d1d5db; /* Matches the site's text color */
 }
 
+
+/* Arrange previews horizontally */
 .news-page .news-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Allow spacing to fill the page */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
     gap: 20px;
+    padding: 20px 0;
+}
+
+.news-page h2 {
+    text-align: center; /* Centers the text horizontally */
+    margin: 0 auto; /* Ensures proper centering for block-level elements */
+    font-size: 1.8rem; /* Adjust the font size if necessary */
+    color: #10a37f; /* Matches the site's green accent color */
 }
 
 .news-page .news-preview {
-    flex: 1 1 calc(25% - 20px); /* Each card takes 1/4 of the container, minus gap space */
-    max-width: calc(25% - 20px);
-    box-sizing: border-box;
-    border: 1px solid #ddd;
+    width: 600px; /* Matches the max-width of the contact form */
+    max-width: 90%; /* Ensures responsiveness on smaller screens */
+    background-color: #2a2a40; /* Matches other card-like elements */
+    color: #d1d5db;
+    border: 1px solid #3c3c5e;
+    border-radius: 10px;
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect for previews */
+.news-page .news-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    background-color: #1e1e2f; /* Slightly darker on hover */
+}
+
+/* Image styling for blog previews */
 .news-page .news-preview img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #2a2a40;
 }
 
+/* Blog title styling */
 .news-page .news-preview h3 {
-    font-size: 1em;
-    margin-bottom: 10px;
-    text-align: left;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #10a37f; /* Highlighted green for titles */
+    text-align: center;
 }
 
-.news-page .news-preview p {
-    font-size: 0.8em;
-    margin-bottom: 10px;
+/* Blog description styling */
+.news-page .news-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all child elements horizontally */
+    justify-content: space-between; /* Ensures proper spacing between elements */
+    width: 600px; /* Matches the max-width of the contact form */
+    max-width: 90%; /* Ensures responsiveness on smaller screens */
+    background-color: #2a2a40; /* Matches other card-like elements */
+    color: #d1d5db;
+    border: 1px solid #3c3c5e;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .news-page .news-preview a {
-    text-align: left;
-    display: block;
-    color: #007BFF;
+    display: inline-block;
+    margin: 10px auto; /* Centers the button within its container */
+    text-align: center;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    background-color: #10a37f;
     text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for read more links */
+.news-page .news-preview a:hover {
+    background-color: #28e9a5;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .news-page .news-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .news-page .news-preview {
+        max-width: 100%;
+    }
 }
   
   /****************************************************************************

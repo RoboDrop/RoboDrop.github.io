@@ -38,7 +38,7 @@
   <main class="content">
     <!-- This is where the individual page’s content will go -->
     <section class="news-section news-page">
-  <h2>News</h2>
+  <h2>Latest News</h2>
   <div class="news-grid">
       
       <div class="news-preview">
@@ -100,13 +100,21 @@
         menu.classList.remove('active');
 
         // Toggle the menu on hamburger click
-        hamburger.addEventListener('click', () => {
+        hamburger.addEventListener('click', (event) => {
             menu.classList.toggle('active');
+            event.stopPropagation(); // Prevent this click from triggering the click outside event
         });
 
         // Close the menu when resizing to larger screens
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Collapse menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
                 menu.classList.remove('active');
             }
         });
