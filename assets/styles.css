@@ -308,13 +308,14 @@
   
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    gap: 1.5rem; /* Spacing between panels */
     margin: 0 auto;
-    max-width: 800px;
-  }
-  
-  .service-item {
+    max-width: 1200px; /* Optional: Constrain maximum width */
+    padding: 20px;
+}
+
+.service-item {
     text-align: center;
     background-color: #2a2a40;
     border-radius: 10px;
@@ -325,32 +326,46 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  .service-item:hover {
+}
+
+.service-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .service-item img {
+}
+
+.service-item img {
     max-width: 70%;
     height: auto;
     border-radius: 15px;
     padding: 10px;
     background-color: #2a2a40;
     margin-bottom: 1rem;
-  }
-  
-  .service-item h3 {
+}
+
+.service-item h3 {
     font-size: 1.2rem;
     color: #10a37f;
     margin: 1rem 0 0.5rem;
-  }
-  
-  .service-item p {
+}
+
+.service-item p {
     font-size: 1rem;
     color: #d1d5db;
-  }
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Stacks panels vertically on small screens */
+        gap: 1rem; /* Reduce spacing on smaller screens */
+    }
+}
   
   
   /****************************************************************************
