@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: "RoboDrop Automation" }}</title>
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <a href="/" class="title-link">
+                <span class="emoji">🤖💧</span>
+                <div class="title-text">
+                    <h2>RoboDrop</h2>
+                    <h3>Lab Automation</h3>
+                </div>
+            </a>
+        </div>
+        <div class="nav-container">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <div class="menu" id="menu">
+                    <a href="/#services">Services</a>
+                    <a href="{{ '/news/' | relative_url }}" class="nav-link">News</a>
+                    <a href="{{ '/about/' | relative_url }}" class="nav-link">About</a>
+                    <a href="#contact" class="contact-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <!-- This is where the individual page’s content will go -->
+    {{ content }}
+  </main>
+
+  <hr> <!-- Horizontal line -->
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to learn more? Fill out the form below, and we'll get back to you as soon as possible.</p>
+        <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+    
+    <hr> <!-- Horizontal line -->
+
+    <footer>
+        <p>&copy; 2024 Robodrop. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        // Ensure the menu is collapsed initially
+        menu.classList.remove('active');
+
+        // Toggle the menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Close the menu when resizing to larger screens
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menu.classList.remove('active');
+            }
+        });
+    });
+</script>

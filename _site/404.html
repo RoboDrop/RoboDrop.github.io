@@ -25,15 +25,19 @@
             </div>
             <nav>
                 <div class="menu" id="menu">
-                    <a href="#services">Services</a>
-                    <a href="#blog">Blog</a>
+                    <a href="/#services">Services</a>
+                    <a href="/news/" class="nav-link">News</a>
+                    <a href="/about/" class="nav-link">About</a>
                     <a href="#contact" class="contact-link">Contact</a>
                 </div>
             </nav>
         </div>
     </header>
-
-    <!-- Intro Section -->
+    
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <!-- This is where the individual page’s content will go -->
+        <!-- Intro Section -->
     <section class="intro" id="intro">
         <div class="intro-text">
             <h1>Streamline Your Science, Automate Your Workflow.</h1>
@@ -111,28 +115,29 @@
     </section>
     <hr> <!-- Horizontal line -->
 
-    <!-- Portfolio Section -->
-    <section class="blog" id="blog">
-        <h2>Latest news</h2>
-        <div class="blog-grid">
-            <!-- Blog Preview Panels -->
-            <div class="blog-preview">
-                <h3>Post Title 1</h3>
-                <p>A brief description of the blog post to entice readers...</p>
-                <a href="/blog/post-1" class="blog-link">Read More</a>
-            </div>
-            <div class="blog-preview">
-                <h3>Post Title 2</h3>
-                <p>A brief description of the blog post to entice readers...</p>
-                <a href="/blog/post-2" class="blog-link">Read More</a>
-            </div>
+    <!-- News Section -->
+    <section class="home-latest-posts">
+        <h2>Latest Posts</h2>
+        <br>
+        <div class="news-grid">
+            
+            <a href="/2024/12/26/hello-world.html" class="news-preview">
+                
+                <div class="news-image">
+                    <img src="/assets/images/helloworld.png" alt="post image">
+                </div>
+                
+                <h3>Hello World</h3>
+                <p><p>Obligatory</p>
+</p>
+            </a>
+            
         </div>
-        <a href="/blog" class="blog-section-link">View All Blog Posts</a>
+        <a href="/news/" class="news-section-link">View all news</a>
     </section>
-        
+  </main>
 
-
-    <hr> <!-- Horizontal line -->
+  <hr> <!-- Horizontal line -->
 
 
     <!-- Contact Section -->
@@ -163,6 +168,8 @@
     </footer>
 </body>
 </html>
+
+
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {

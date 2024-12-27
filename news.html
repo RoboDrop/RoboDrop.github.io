@@ -1,0 +1,21 @@
+---
+layout: base
+permalink: "/news/"
+---
+<section class="news-section news-page">
+  <h2>News</h2>
+  <div class="news-grid">
+      {% for post in site.posts %}
+      <div class="news-preview">
+          {% if post.featured_image %}
+          <div class="news-image">
+              <img src="{{ post.featured_image | relative_url }}" alt="post image">
+          </div>
+          {% endif %}
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | truncatewords: 50 }}</p>
+          <a href="{{ post.url | relative_url }}" class="news-link">Read More</a>
+      </div>
+      {% endfor %}
+  </div>
+</section>

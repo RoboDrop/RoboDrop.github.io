@@ -23,8 +23,6 @@ description: Custom automation for life sciences
 url: "https://robodrop.github.io"
 include:
   - assets
-layout:
-  - home
 # Build settings
 plugins:
   - jekyll-feed
