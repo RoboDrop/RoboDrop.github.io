@@ -333,6 +333,14 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
+.disclaimer {
+  font-size: 0.85rem; /* Slightly smaller than normal text */
+  color: #555; /* Subtle but readable gray */
+  text-align: center; /* Center-align to match the section's layout */
+  margin-top: 10px; /* Add spacing above the disclaimer */
+  font-style: italic; /* Differentiate the disclaimer */
+}
+
 .service-item img {
     max-width: 70%;
     height: auto;
