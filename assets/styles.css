@@ -732,3 +732,14 @@ body {
   footer a:hover {
     color: #28e9a5;
   }
+
+  .social-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.social-icon:hover {
+    opacity: 0.8; /* Slight hover effect */
+}
