@@ -33,148 +33,146 @@
     border-bottom: 1px solid #3c3c5e;
     position: relative;
     z-index: 1000;
-  }
-  
-  /* Title section in header */
-  .title-container {
+}
+
+/* Title section in header */
+.title-container {
     display: flex;
     align-items: center;
-  }
-  
-  .title-link {
+}
+
+.title-link {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: inherit;
-  }
-  
-  .title-container .emoji {
+}
+
+.title-container .emoji {
     font-size: 2rem;
     color: #ffffff;
     margin-right: 1rem;
-  }
-  
-  .title-container .title-text {
+}
+
+.title-container .title-text {
     display: flex;
     flex-direction: column;
-  }
-  
-  .title-container .title-text h2 {
+}
+
+.title-container .title-text h2 {
     margin: 0;
     font-size: 2rem;
     color: #10a37f;
-  }
-  
-  .title-container .title-text h3 {
+}
+
+.title-container .title-text h3 {
     margin: 0;
     font-size: 1rem;
     color: #666;
-  }
-  
-  /* Navigation container */
-  .nav-container {
+}
+
+/* Navigation container */
+.nav-container {
     position: relative;
-  }
-  
-  /* Desktop navigation menu */
-  .menu {
+}
+
+/* Desktop navigation menu */
+.menu {
     display: flex;
     gap: 2rem;
-  }
-  
-  /* Navigation links */
-  nav a {
+}
+
+/* Navigation links */
+nav a {
     color: #d1d5db;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     background-color: #2a2a40;
     color: #10a37f;
-  }
-  
-  /* "Contact" link gets unique styling */
-  nav a.contact-link {
+}
+
+/* "Contact" link gets unique styling */
+nav a.contact-link {
     background-color: #10a37f;
     color: #ffffff;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  nav a.contact-link:hover {
+}
+
+nav a.contact-link:hover {
     background-color: #28e9a5;
     transform: scale(1.05);
-  }
-  
-  /* Hamburger for mobile */
-  .hamburger {
+}
+
+/* Hamburger for mobile */
+.hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     width: 30px;
     gap: 5px;
-  }
-  
-  .hamburger span {
+    position: relative;
+    z-index: 1100;
+}
+
+.hamburger span {
     height: 3px;
     width: 100%;
     background-color: #d1d5db;
     border-radius: 2px;
     transition: all 0.3s ease;
-  }
-  
-  /* Responsive navigation menu (for mobile) */
-  @media (max-width: 768px) {
+}
+
+/* Responsive navigation menu (for mobile) */
+@media (max-width: 768px) {
     .hamburger {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-  
+
     .menu {
-      display: none; /* Hidden by default */
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 10px;
-      background-color: #2a2a40;
-      padding: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #2a2a40;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
     }
-  
-    /* Show the menu when active */
+
     .menu.active {
-      display: flex;
+        display: flex;
     }
-  
-    /* Mobile nav link styles */
+
     .menu a {
-      padding: 0.75rem 1rem;
-      text-align: center;
-      border-bottom: 1px solid #3c3c5e;
+        padding: 0.75rem 1rem;
+        text-align: center;
+        border-bottom: 1px solid #3c3c5e;
     }
-  
+
     .menu a:last-child {
-      border-bottom: none;
+        border-bottom: none;
     }
-  
+
     .menu a.contact-link {
-      background-color: #10a37f;
-      color: #ffffff;
-      border-radius: 5px;
+        background-color: #10a37f;
+        color: #ffffff;
+        border-radius: 5px;
     }
-  
+
     .menu a:hover {
-      background-color: #1e1e2f;
+        background-color: #1e1e2f;
     }
-  }
+}
   
   
   /****************************************************************************
@@ -722,6 +720,8 @@ body {
   padding: 20px;
   background-color: #1e1e2f; /* Match the site's background */
   min-height: 100vh; /* Ensures the footer stays at the bottom */
+  position; relative
+  z-index; 1
 }
 
 /* Post article styling */
@@ -734,6 +734,8 @@ body {
   padding: 20px;
   box-sizing: border-box;
   color: #d1d5db; /* Match site text color */
+  position; relative
+  z-index; 1  
 }
 
 /* Header styling */
