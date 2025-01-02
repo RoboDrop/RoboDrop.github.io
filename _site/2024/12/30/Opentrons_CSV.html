@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-02T15:34:24-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RoboDrop Automation</title><subtitle>Custom automation for life sciences</subtitle><entry><title type="html">CSV Runtime parameters</title><link href="http://localhost:4000/2024/12/30/Opentrons_CSV.html" rel="alternate" type="text/html" title="CSV Runtime parameters" /><published>2024-12-30T00:00:00-08:00</published><updated>2024-12-30T00:00:00-08:00</updated><id>http://localhost:4000/2024/12/30/Opentrons_CSV</id><content type="html" xml:base="http://localhost:4000/2024/12/30/Opentrons_CSV.html"><![CDATA[<p>Opentrons recently updated their app to accept a CSV as runtime parameters. I did a quick runthrough of the code to see how this works.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Runtime parameters</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+</head>
+<link rel="icon" type="image/png" href="/assets/robot.png">
+<body>
+    <header>
+        <div class="title-container">
+            <a href="/" class="title-link">
+                <span class="emoji">🤖💧</span>
+                <div class="title-text">
+                    <h2>RoboDrop</h2>
+                    <h3>Lab Automation</h3>
+                </div>
+            </a>
+        </div>
+        <div class="nav-container">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <div class="menu" id="menu">
+                    <a href="/#services">Services</a>
+                    <a href="/news/" class="nav-link">News</a>
+                    <a href="/about/" class="nav-link">About</a>
+                    <a href="#contact" class="contact-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <!-- This is where the individual page’s content will go -->
+      <!-- Post content goes here -->
+
+<main class="post-container">
+  <article class="post">
+      <header class="post-header">
+          <h1 class="post-title">CSV Runtime parameters</h1>
+          <p class="post-meta">Posted on December 30, 2024</p>
+      </header>
+      <section class="post-body">
+          <p>Opentrons recently updated their app to accept a CSV as runtime parameters. I did a quick runthrough of the code to see how this works.</p>
 
 <p>The Opentrons App is a great way to get started with liquid handling, however one of the pain points is generating a python file for every run. This can be a intimidating for the python beginner or plain repetitive if you’re using the Opentrons for the same workflow with varying inputs.</p>
 
@@ -96,8 +146,88 @@
                 <span class="n">pipette</span><span class="p">.</span><span class="nf">drop_tip</span><span class="p">()</span>
         <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="n">protocol</span><span class="p">.</span><span class="nf">comment</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Error processing row: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s"> - Row data: </span><span class="si">{</span><span class="n">row</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
-</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[Opentrons recently updated their app to accept a CSV as runtime parameters. I did a quick runthrough of the code to see how this works.]]></summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2024/12/26/hello-world.html" rel="alternate" type="text/html" title="Hello World" /><published>2024-12-26T00:00:00-08:00</published><updated>2024-12-26T00:00:00-08:00</updated><id>http://localhost:4000/2024/12/26/hello-world</id><content type="html" xml:base="http://localhost:4000/2024/12/26/hello-world.html"><![CDATA[<p>Obligatory</p>
+</code></pre></div></div>
 
-<p><img src="/assets/images/helloworld.png" alt="Optional Additional Image" /></p>
+      </section>
+  </article>
+</main>
 
-<p>Obligatory additional content</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Obligatory]]></summary></entry></feed>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightElement(block);
+      });
+  });
+</script>
+  </main>
+
+  <hr> <!-- Horizontal line -->
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to learn more? Fill out the form below, and we'll get back to you as soon as possible.</p>
+        <form class="contact-form" action="https://formspree.io/f/xovvwdpo" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+    
+    <hr> <!-- Horizontal line -->
+
+    <footer>
+        <p>&copy; 2024 RoboDrop. All Rights Reserved.</p>
+        <a href="https://linkedin.com/company/robodrop-automation/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <img src="/assets/images/linkedin_logo.png" alt="LinkedIn" class="social-icon">
+        </a>
+    </footer>
+</body>
+</html>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        // Ensure the menu is collapsed initially
+        menu.classList.remove('active');
+
+        // Toggle the menu on hamburger click
+        hamburger.addEventListener('click', (event) => {
+            menu.classList.toggle('active');
+            event.stopPropagation(); // Prevent this click from triggering the click outside event
+        });
+
+        // Close the menu when resizing to larger screens
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Collapse menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    });
+</script>

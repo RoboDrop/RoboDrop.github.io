@@ -451,7 +451,7 @@ body {
 
 /* Ensure the container has centering properties */
 .home-latest-posts {
-    text-align: center; /* Centers inline elements like buttons and text */
+  text-align: center; /* Centers inline elements like buttons and text */
 }
 
 .home-latest-posts .news-section-link {
@@ -474,58 +474,97 @@ body {
 }
 
 .home-latest-posts .news-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
 }
 
-/* Make the whole panel clickable */
 .home-latest-posts .news-preview {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #2a2a40;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    text-decoration: none; /* Remove default link underline */
-    color: inherit; /* Ensure the text color remains consistent */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  min-height: 400px; /* Use min-height for dynamic sizing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items closer to the top */
+  background-color: #2a2a40;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .home-latest-posts .news-preview:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Remove underline and ensure images remain unaffected */
 .home-latest-posts .news-preview img {
-    pointer-events: none; /* Prevent click interaction on the image itself */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 5px; /* Reduced space below the image */
 }
 
-.home-latest-posts .news-preview h3,
+.home-latest-posts .news-preview h3 {
+  font-size: 1.2rem;
+  margin: 5px 0; /* Adjusted margins */
+  color: #10a37f;
+  text-align: center;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .home-latest-posts .news-preview p {
-    margin: 0;
-    text-align: center;
+  font-size: 1rem; /* Larger text */
+  color: #d1d5db;
+  text-align: center;
+  line-height: 1.6; /* Increased line spacing */
+  height: auto; /* Allow dynamic height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Allow up to 5 lines of text */
+  -webkit-box-orient: vertical;
 }
 
 .home-latest-posts .news-preview a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: #10a37f;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    display: inline-block;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  background-color: #10a37f;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .home-latest-posts .news-preview a:hover {
-    background-color: #28e9a5;
+  background-color: #28e9a5;
+  transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+  .home-latest-posts .news-grid {
+      flex-direction: column;
+      align-items: center; /* Center previews on smaller screens */
+  }
+
+  .home-latest-posts .news-preview {
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: 300px;
+  }
+}
+
 
 /* Specific to News Page */
 .news-page {
@@ -776,6 +815,32 @@ body {
   .post-body {
       font-size: 0.95rem;
   }
+}
+
+/* Code Block Container */
+.code-block {
+  background-color: #1e1e1e; /* VS Code dark background */
+  color: #d4d4d4; /* Default text color */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto; /* Horizontal scroll for long lines */
+  margin: 20px 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Syntax Highlighting */
+.code-block .keyword { color: #569cd6; } /* Keywords */
+.code-block .string { color: #d69d85; } /* Strings */
+.code-block .function { color: #dcdcaa; } /* Function names */
+.code-block .comment { color: #6a9955; font-style: italic; } /* Comments */
+.code-block .number { color: #b5cea8; } /* Numbers */
+.code-block .operator { color: #d4d4d4; } /* Operators */
+
+/* Optional: Add some box shadow for a polished look */
+.code-block {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
   
   
