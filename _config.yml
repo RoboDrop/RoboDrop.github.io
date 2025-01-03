@@ -26,6 +26,11 @@ include:
 # Build settings
 plugins:
   - jekyll-feed
+exclude:
+  - _site
+  - Gemfile
+  - Gemfile.lock
+  - robodrop.code-workspace
 
 # Exclude from processing.
 # The following items will not be processed, by default.

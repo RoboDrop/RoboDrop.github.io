@@ -2,7 +2,7 @@
 layout: post
 title: "CSV Runtime parameters"
 date: 2024-12-30
-featured_image: /assets/images/runtimeCSV.png
+featured_image: /assets/images/posts/2024-12-30-Opentrons_CSV/runtimeCSV.png
 ---
 
 Opentrons recently updated their app to accept a CSV as runtime parameters. I did a quick runthrough of the code to see how this works.
