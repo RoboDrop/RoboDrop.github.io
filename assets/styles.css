@@ -430,11 +430,6 @@ nav a.contact-link:hover {
   /****************************************************************************
    * 7. NEWS SECTION
    ****************************************************************************/
-  /* General Reset */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
 /* Global News Section Styles */
 .news-section {
@@ -759,8 +754,8 @@ body {
   padding: 20px;
   background-color: #1e1e2f; /* Match the site's background */
   min-height: 100vh; /* Ensures the footer stays at the bottom */
-  position; relative
-  z-index; 1
+  position; relative;
+  z-index; 1;
 }
 
 /* Post article styling */
@@ -773,8 +768,8 @@ body {
   padding: 20px;
   box-sizing: border-box;
   color: #d1d5db; /* Match site text color */
-  position; relative
-  z-index; 1  
+  position; relative;
+  z-index; 1;
 }
 
 /* Header styling */
