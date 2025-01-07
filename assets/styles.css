@@ -869,3 +869,82 @@ nav a.contact-link:hover {
 .social-icon:hover {
     opacity: 0.8; /* Slight hover effect */
 }
+
+/****************************************************************************
+ * ABOUT PAGE STYLES
+ ****************************************************************************/
+
+/* About page container (adjusting flex order for desktop) */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: #2a2a40; /* Matches site style */
+  border-radius: 15px; /* Rounded corners for the section */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  margin: 2rem auto; /* Center the section on the page */
+  max-width: 1200px;
+  text-align: left; /* Left-align content */
+}
+
+.about-text {
+  flex: 2;
+  padding: 1rem;
+  order: 1; /* Text appears before the image */
+}
+
+/* About page heading */
+.about-text h1 {
+  font-size: 2.5rem;
+  color: #10a37f; /* Accent color */
+  margin-bottom: 1rem;
+}
+
+/* Paragraph styles */
+.about-text p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* About page content flex order for desktop */
+.about-image {
+  flex: 1;
+  padding: 1rem;
+  order: 2; /* Image appears after the text */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligns the image with the paragraph */
+  margin-top: 50px; /* Moves the image down slightly */
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px; /* Rounded corners for the image */
+  padding: 10px;
+  background-color: #1e1e2f; /* Matches the rest of the site */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive design for mobile and smaller screens */
+@media (max-width: 768px) {
+  .about-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-text {
+      padding: 0;
+      text-align: center;
+      order: 2; /* Text goes below the image in smaller screens */
+  }
+
+  .about-image {
+      order: 1; /* Image appears above the text in smaller screens */
+  }
+}
